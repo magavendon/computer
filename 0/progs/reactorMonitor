@@ -1,0 +1,11 @@
+-------------------------------------
+--	Author: James Grider
+--	  Date: Feb 27, 2016
+--     Ver: 0.1.0
+-------------------------------------
+
+local bridge = peripheral.wrap("back")
+local net = peripheral.wrap("right")
+
+bridge.clear()
+bridge.addText(4, 20, "Hello", 0xffffff)
