@@ -2,14 +2,14 @@
 --    Orig: http://ftbwiki.org/Terminal_Glasses
 --	  Edit: James Grider
 --	  Date: Feb 27, 2016
---     Ver: 1.3.0
+--     Ver: 1.4.0
 -------------------------------------
 
 glass = peripheral.wrap("back")
 
 function addBox()
 
-  glass.addBox(1,80,80,10,0xFFFFFF,0.2)
+  glass.addBox(1,60,80,10,0xFFFFFF,0.2)
 
 end
 
