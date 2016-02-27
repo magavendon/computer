@@ -1,0 +1,11 @@
+-------------------------------------
+--	Author: http://www.computercraft.info/wiki/Peripheral.getNames
+--	  Date: Feb 27, 2016
+--     Ver: 1.0.0
+-------------------------------------
+
+local periList = peripheral.getNames()
+
+for i = 1, #periList do
+	print("I have a "..peripheral.getType(periList[i]).." attached as \""..periList[i].."\".")
+end
