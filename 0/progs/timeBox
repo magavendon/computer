@@ -13,7 +13,7 @@ glass = peripheral.wrap("back")
 
 function addBox()
 
-  glass.addBox(1,60,80,10,0xFFFFFF,0.2)
+  glass.addBox(1,63,80,10,0xFFFFFF,0.2)
 
 end
 
@@ -21,7 +21,7 @@ function timeDis()
 
   time = textutils.formatTime(os.clock(), false)
 
-  glass.addText(5,2,"TIME: " .. time, 0xFF0000)
+  glass.addText(5,64,"TIME: " .. time, 0xFF0000)
 
 end
 
