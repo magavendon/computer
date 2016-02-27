@@ -2,7 +2,7 @@
 --    Orig: http://ftbwiki.org/Terminal_Glasses
 --	  Edit: James Grider
 --	  Date: Feb 27, 2016
---     Ver: 1.5.0
+--     Ver: 2.0.0
 -------------------------------------
 
 glass = peripheral.wrap("back")
@@ -15,7 +15,7 @@ end
 
 function timeDis()
 
-  time = textutils.formatTime(os.time(), false)
+  time = textutils.formatTime(os.clock(), false)
 
   glass.addText(5,64,"TIME: " .. time, 0xFF0000)
 
