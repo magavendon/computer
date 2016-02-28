@@ -1,14 +1,14 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.2.2
+--     Ver: 1.2.3
 -------------------------------------
 
 bridge = peripheral.wrap("back")
 mainReactor = peripheral.wrap("BigReactors-Reactor_0")
 
 function backgroundBox()
-	bridge.addBox(3, 63, 40, 20, 0xFFFFFF, 0.2)
+	bridge.addBox(3, 63, 80, 20, 0xFFFFFF, 0.2)
 end
 
 function getData()
