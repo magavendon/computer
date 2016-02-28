@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.0.0
+--     Ver: 1.1.1
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -13,6 +13,7 @@ end
 
 function getData()
 	bridge.addText(5, 64, "Active: ", 0xFFFFFF)
+	bridge.addText(12, 64, mainReactor.getActive(), 0x00CC00)
 end
 
 function main()
