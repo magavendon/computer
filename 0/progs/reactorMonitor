@@ -1,19 +1,24 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.1.2
+--     Ver: 1.2.0
 -------------------------------------
 
 bridge = peripheral.wrap("back")
 mainReactor = peripheral.wrap("BigReactors-Reactor_0")
 
 function backgroundBox()
-	bridge.addBox(1, 63, 80, 10, 0xFFFFFF, 0.2)
+	bridge.addBox(3, 63, 160, 10, 0xFFFFFF, 0.2)
 end
 
 function getData()
+	-- Check whether the reactor is active or not.
 	bridge.addText(5, 64, "Active: ", 0xFFFFFF)
 	bridge.addText(40, 64, mainReactor.getActive(), 0x00CC00)
+	
+	-- Check energy produced last tick.
+	bridge.addText(5, 72, "RF/T: ", 0xFFFFFF)
+	bridge.addText(30, 72, math.floor(mainReactor.getEnergyProducedLastTick(), 0x00CC00)
 end
 
 function main()
