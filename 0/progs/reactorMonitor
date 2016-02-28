@@ -1,13 +1,15 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 27, 2016
---     Ver: 0.4.0
+--     Ver: 0.5.0
 -------------------------------------
 
 bridge = peripheral.wrap("back")
 
-bridge.clear()
-
-while true do
-	bridge.write("Testing")
+function main()
+	while true do
+		bridge.clear()
+		bridge.addText(5, 64, "Hello, World!", 0xFFFFFF)
+		sleep(0.1)
+	end
 end
