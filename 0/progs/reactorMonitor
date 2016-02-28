@@ -1,15 +1,25 @@
 -------------------------------------
 --	Author: James Grider
---	  Date: Feb 27, 2016
---     Ver: 0.8.0
+--	  Date: Feb 28, 2016
+--     Ver: 1.0.0
 -------------------------------------
 
 bridge = peripheral.wrap("back")
+mainReactor = peripheral.wrap("BigReactors-Reactor_0")
+
+function backgroundBox()
+	bridge.addBox(1, 63, 80, 10, 0xFFFFFF, 0.2)
+end
+
+function getData()
+	bridge.addText(5, 64, "Active: ", 0xFFFFFF)
+end
 
 function main()
 	while true do
 		bridge.clear()
-		bridge.addText(5, 64, "Hello, World!", 0x000000)
+		backgroundBox()
+		getData()
 		bridge.sync()
 		sleep(0.1)
 	end
