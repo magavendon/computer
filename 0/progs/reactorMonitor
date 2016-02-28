@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.2.0
+--     Ver: 1.2.1
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -18,7 +18,7 @@ function getData()
 	
 	-- Check energy produced last tick.
 	bridge.addText(5, 72, "RF/T: ", 0xFFFFFF)
-	bridge.addText(30, 72, math.floor(mainReactor.getEnergyProducedLastTick(), 0x00CC00)
+	bridge.addText(30, 72, math.floor(mainReactor.getEnergyProducedLastTick()), 0x00CC00)
 end
 
 function main()
