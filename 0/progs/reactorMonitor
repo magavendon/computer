@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 27, 2016
---     Ver: 0.6.0
+--     Ver: 0.7.0
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -9,7 +9,7 @@ bridge = peripheral.wrap("back")
 function main()
 	while true do
 		bridge.clear()
-		bridge.addText(5, 64, "Hello, World!", 0xFFFFFF)
+		bridge.addText(5, 64, "Hello, World!", 0x000000)
 		sleep(0.1)
 	end
 end
