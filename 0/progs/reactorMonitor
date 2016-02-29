@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.4.0
+--     Ver: 1.4.1
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -32,8 +32,8 @@ function showFuel()
 	maxFuel = mainReactor.getFuelAmountMax()
 	fuelPercent = math.floor((currentFuel / maxFuel) * 100)
 	
-	bridge.addBox(5, 94, 100, 8, 0xFFFFFF, 1)
-	bridge.addBox(5, 94, fuelPercent, 8, 0xFFFF00)
+	bridge.addBox(5, 94, 100, 8, 0x000000, 1)
+	bridge.addBox(5, 104, fuelPercent, 8, 0xFFFF00)
 end
 
 function getData()
