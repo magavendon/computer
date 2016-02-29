@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.3.6
+--     Ver: 1.3.7
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -13,9 +13,11 @@ end
 
 function getStoredEnergy()
 	storedEnergy = mainReactor.getEnergyStored()
+	print(storedEnergy)
 	
 	if storedEnergy > 999999 then
 		result = math.floor(storedEnergy / 10000)
+		print(result)
 		result = result / 100
 		return result .. "m"
 	elseif storedEnergy > 999 then
