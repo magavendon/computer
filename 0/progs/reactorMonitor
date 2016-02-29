@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.3.4
+--     Ver: 1.3.5
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -18,7 +18,7 @@ function getStoredEnergy()
 		result = math.floor(storedEnergy / 10000)
 		result = result / 100
 		return result .. "m"
-	else if storedEnergy > 999 then
+	elseif storedEnergy > 999 then
 		result = math.floor(storedEnergy / 100)
 		result = result / 10
 		return result .. "k"
