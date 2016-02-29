@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.3.7
+--     Ver: 1.3.8
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -39,6 +39,7 @@ function getData()
 	bridge.addText(34, 74, math.floor(mainReactor.getEnergyProducedLastTick()), 0x00CC00)
 	
 	-- Check RF energy stored.
+	print("Before function call")
 	bridge.addText(5, 84, "RF Stored: ", 0xFFFFFF)
 	bridge.addText(60, 84, math.floor(mainReactor.getEnergyStored()), 0x00CC00)
 end
