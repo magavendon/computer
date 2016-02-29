@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.4.3
+--     Ver: 1.4.4
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -34,9 +34,9 @@ function showFuel()
 	
 	bridge.addBox(5, 104, 100, 8, 0x000000, 1)
 	if fuelPercent < 30 then
-		bridge.addBox(5, 104, fuelPercent, 8, 0xFF0000)
+		bridge.addBox(5, 104, fuelPercent, 5, 0xFF0000)
 	else
-		bridge.addBox(5, 104, fuelPercent, 8, 0xFFFF00)
+		bridge.addBox(5, 104, fuelPercent, 5, 0xFFFF00)
 	end
 end
 
