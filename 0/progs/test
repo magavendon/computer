@@ -1,3 +1,13 @@
-val = math.floor(1230000 / 10000)
-val = val / 100
-print(val .. " mil")
+mainReactor = peripheral.wrap("BigReactors-Reactor_0")
+storedEnergy = mainReactor.getEnergyStored()
+print(storedEnergy)
+
+function foo()
+	if storedEnergy > 999999 then
+		result = math.floor(storedEnergy / 10000)
+		result = result / 100
+		return result .. "m"
+	end
+end
+
+print(foo())
