@@ -1,7 +1,7 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.3.8
+--     Ver: 1.3.9
 -------------------------------------
 
 bridge = peripheral.wrap("back")
@@ -13,11 +13,9 @@ end
 
 function getStoredEnergy()
 	storedEnergy = mainReactor.getEnergyStored()
-	print(storedEnergy)
 	
 	if storedEnergy > 999999 then
 		result = math.floor(storedEnergy / 10000)
-		print(result)
 		result = result / 100
 		return result .. "m"
 	elseif storedEnergy > 999 then
@@ -39,9 +37,8 @@ function getData()
 	bridge.addText(34, 74, math.floor(mainReactor.getEnergyProducedLastTick()), 0x00CC00)
 	
 	-- Check RF energy stored.
-	print("Before function call")
 	bridge.addText(5, 84, "RF Stored: ", 0xFFFFFF)
-	bridge.addText(60, 84, math.floor(mainReactor.getEnergyStored()), 0x00CC00)
+	bridge.addText(60, 84, math.floor(mainReactor.getStoredEnergy()), 0x00CC00)
 end
 
 function main()
