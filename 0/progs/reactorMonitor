@@ -1,14 +1,30 @@
 -------------------------------------
 --	Author: James Grider
 --	  Date: Feb 28, 2016
---     Ver: 1.3.2
+--     Ver: 1.3.3
 -------------------------------------
 
 bridge = peripheral.wrap("back")
 mainReactor = peripheral.wrap("BigReactors-Reactor_0")
 
 function backgroundBox()
-	bridge.addBox(3, 63, 80, 30, 0xFFFFFF, 0.2)
+	bridge.addBox(3, 63, 100, 30, 0xFFFFFF, 0.2)
+end
+
+function getStoredEnergy()
+	storedEnergy = mainReactor.getEnergyStored()
+	
+	if storedEnergy > 999999 then
+		result = math.floor(storedEnergy / 10000)
+		result = result / 100
+		return result .. "m"
+	else if storedEnergy > 999 then
+		result = math.floor(storedEnergy / 100)
+		result = result / 10
+		return result .. "k"
+	else
+		return result
+	end
 end
 
 function getData()

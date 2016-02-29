@@ -1,0 +1,3 @@
+val = math.floor(1230000 / 10000)
+val = val / 100
+print(val .. " mil")
